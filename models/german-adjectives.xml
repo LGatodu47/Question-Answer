@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model checker="Default" prompt="Traduction allemande de: %s" question_limit="Nombre de mots" question_range="Mots">
+    <angoisse display="angoissé, anxieux">ängstlich</angoisse>
+    <ouvert display="ouvert, large d'esprit">aufgeschlossen</ouvert>
+    <enthousiasme display="enthousiasmé (par)">begeistert (von+D)</enthousiasme>
+    <modeste>bescheiden</modeste>
+    <soucieux display="préoccupé, soucieux">besorgt</soucieux>
+    <colere display="en colère">böse</colere>
+    <reconnaissant display="reconnaissant (envers)">dankbar (+D)</reconnaissant>
+    <jaloux display="jaloux (de)">eifersüchtig (auf+A)</jaloux>
+    <sensible>empfindlich</sensible>
+    <decourage display="découragé">entmutigt</decourage>
+    <horrifie display="horrifié">entsetzt</horrifie>
+    <decu display="déçu (par)">enttäuscht (von+D)</decu>
+    <surpris display="surpris, étonné">erstaunt</surpris>
+    <lache display="lâche">feige</lache>
+    <courageux display="courageux, assidu">fleißig</courageux>
+    <insolent>frech</insolent>
+    <aimable display="aimable (envers)">freundlich (zu+D)</aimable>
+    <content>froh</content>
+    <peureux>furchtsam</peureux>
+    <patient>geduldig</patient>
+    <obeissant display="obéissant">gehorsam</obeissant>
+    <mechant display="méchant">gemein</mechant>
+    <emu display="ému (par)">gerührt (von+D)</emu>
+    <indifferent display="indifférent">gleichgültig</indifferent>
+    <cruel>grausam</cruel>
+    <genereux display="généreux">großzügig</genereux>
+    <opiniatre display="opiniâtre">hartnäckig</opiniatre>
+    <serviable>hilfsbereit</serviable>
+    <poli>höflich</poli>
+    <espoir display="plein d'espoir">hoffnungsvoll</espoir>
+    <ridicule>lächerlich</ridicule>
+    <insousciant>leichtsinnig</insousciant>
+    <passionne display="passionné">leidenschaftlich</passionne>
+    <mefiant display="méfiant">misstrauisch</mefiant>
+    <envieux display="envieux (de)">neidisch (auf+A)</envieux>
+    <curieux>neugierig</curieux>
+    <egards display="sans égards">rücksichtslos</egards>
+    <attentionne display="plein d'égards, attentionné">rücksichtsvoll</attentionne>
+    <timide>schüchtern</timide>
+    <coupable>schuldig</coupable>
+</model>
