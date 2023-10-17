@@ -1,0 +1,77 @@
+:root {
+    --clr-bg: #0e1f14;
+    --clr-txt: #dfcfab;
+    --clr-txt-shadow: #000000;
+    --clr-sub: #cdff6f;
+    --clr-input-bg: #174442;
+    --clr-input-border: #021817;
+    --clr-input-border-select: #FFFFFF;
+}
+
+body {
+    position: absolute;
+    margin: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: var(--clr-bg);
+    color: var(--clr-txt);
+    font-family: 'Times New Roman', Times, serif;
+    user-select: none;
+}
+
+#content {
+    position: relative;
+    top: 12rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#question {
+    position: relative;
+    flex: 1;
+    font-size: 5rem;
+    text-shadow: 0.5rem 0.5rem 15px var(--clr-txt-shadow);
+}
+
+#user_input {
+    flex: 1;
+    scale: 2;
+    color: var(--clr-txt);
+    background-color: var(--clr-input-bg);
+    border-color: var(--clr-input-border);
+    border-style: solid;
+    border-width: 0.15rem;
+    border-radius: 0.25rem;
+    user-select: none;
+}
+
+#user_input:focus {
+    outline: none;
+    border-color: var(--clr-input-border-select);
+}
+
+p {
+    margin: 5rem;
+    font-size: 2rem;
+    font-style: italic;
+    text-shadow: 0rem 0rem 12px var(--clr-txt);
+}
+
+#sub {
+    color: var(--clr-sub);
+    text-shadow: 0rem 0rem 12px var(--clr-sub);
+}
+
+#options {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#options > label {
+    position: relative;
+    font-size: 2rem;
+    align-content: center;
+}
