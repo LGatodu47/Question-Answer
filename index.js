@@ -236,11 +236,6 @@ function updateErrorless() {
 
 // Utilities
 
-function getRandomItem(set) {
-    let items = Array.from(set);
-    return items[Math.floor(Math.random() * items.length)];
-}
-
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
