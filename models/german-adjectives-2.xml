@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model checker="Default" prompt="Traduction allemande de: %s" question_limit="Nombre de mots" question_range="Mots">
+    <ridicule>lächerlich</ridicule>
+    <insousciant>leichtsinnig</insousciant>
+    <passionne display="passionné">leidenschaftlich</passionne>
+    <mefiant display="méfiant">misstrauisch</mefiant>
+    <envieux display="envieux (de)">neidisch (auf+A)</envieux>
+    <curieux>neugierig</curieux>
+    <egards display="sans égards">rücksichtslos</egards>
+    <attentionne display="plein d'égards, attentionné">rücksichtsvoll</attentionne>
+    <timide>schüchtern</timide>
+    <coupable>schuldig</coupable>
     <desir display="plein de désirs">sehnsüchtig</desir>
     <assurance display="plein d'assurance">selbstbewusst</assurance>
     <soi display="sûr de soi">selbstsicher</soi>
@@ -20,4 +30,10 @@
     <raisonnable>vernünftig</raisonnable>
     <comprehensif display="compréhensif">verständnisvoll</comprehensif>
     <etonne display="étonné">verwundert</etonne>
+    <desespere display="désespéré">verzweifelt</desespere>
+    <prudent>vorsichtig</prudent>
+    <furieux>wütend</furieux>
+    <colere display="en colère">zornig</colere>
+    <content display="content de">zufrieden (mit+D)</content>
+    <confiant>zuversichtlich</confiant>
 </model>
