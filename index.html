@@ -13,15 +13,16 @@
                 <option value="none">Aucun</option>
             </select>
         </label>
-        <label for="errorless">Sans Erreur:
+        <button id="reveal_btn" onclick="revealAnswer()">Réponse</button>
+        <!-- <label for="errorless">Sans Erreur:
             <input id="errorless" name="errorless" type="checkbox" checked onchange="updateErrorless()">
-        </label>
+        </label> -->
     </div>
     <div id="content">
-        <h1 id="question">Voici une question</h1>
+        <h1 id="question">(Pas de question)</h1>
         <input id="user_input" placeholder="Réponse">
         <p>(Fais entrée pour valider)</p>
-        <p id="sub">La réponse précédente était: <span id="previous_answer"></span></p>
+        <p id="sub" hidden>La réponse est: <span id="current_answer"></span></p>
     </div>
     <script src="index.js"></script>
 </body>

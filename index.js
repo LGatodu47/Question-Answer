@@ -4,8 +4,9 @@ const MAX_SUBLIST_AMOUNT = 15;
 const xmlSelect = document.getElementById('xml_select');
 const userInput = document.getElementById("user_input");
 const questionText = document.getElementById('question');
-const previousAnswer = document.getElementById('previous_answer');
-const errorlessCheckbox = document.getElementById('errorless');
+const currentAnswer = document.getElementById('current_answer');
+const revealButton = document.getElementById('reveal_btn');
+// const errorlessCheckbox = document.getElementById('errorless');
 const subText = document.getElementById('sub');
 let lowerBoundInput;
 let higherBoundInput;
@@ -37,8 +38,8 @@ let message = "";
 
 let questionQueue;
 let currentQuestion;
-let errorless;
-updateErrorless()
+let errorless = true; // const
+// updateErrorless()
 
 async function loadXMLFile() {
     let toLoad = xmlSelect.value
@@ -153,7 +154,6 @@ function load(xml) {
 
 function validateAnswer(answer) {
     if(!errorless || (currentQuestion !== undefined && checker(currentQuestion[1], answer))) {
-        previousAnswer.textContent = currentQuestion[1]
         currentQuestion = questionQueue.shift()
         if(questionQueue.length <= 0) {
             shuffleArray(questionQueue = sliceQuestionList())
@@ -167,7 +167,9 @@ function validateAnswer(answer) {
 function showQuestion() {
     if(currentQuestion !== undefined) {
         questionText.textContent = message.includes('%s') ? message.replace('%s', currentQuestion[0]) : message + currentQuestion[0];
+        currentAnswer.textContent = currentQuestion[1]
     }
+    subText.hidden = true
 }
 
 let lastValue = ""
@@ -185,12 +187,11 @@ userInput.addEventListener('beforeinput', e => {
 })
 
 function parseAnswerChecker(checker) {
-    const defaultAnswerChecker = (a, s) => s === a;
     if(checker === undefined || checker === null) {
-        return defaultAnswerChecker;
+        return DEFAULT_ANSWER_CHECKER;
     }
     switch(checker) {
-        case 'Default': {
+        case 'German': {
             return (a, s) => {
                 if(a.includes('ß') && !s.includes('ß')) {
                     a = a.replace('ß', 'ss')
@@ -202,7 +203,8 @@ function parseAnswerChecker(checker) {
             };
         }
         default: {
-            return defaultAnswerChecker;
+            console.log('Answer Checker named {} could not be parsed!', checker)
+            return DEFAULT_ANSWER_CHECKER;
         }
     }
 }
@@ -255,10 +257,14 @@ function getMaxQuestionAmount() {
     return questionAmount;
 }
 
-function updateErrorless() {
-    errorless = errorlessCheckbox.checked;
-    subText.hidden = errorless;
+function revealAnswer() {
+    subText.hidden = !subText.hidden
 }
+
+// function updateErrorless() {
+//     errorless = errorlessCheckbox.checked;
+//     subText.hidden = errorless;
+// }
 
 // Utilities
 

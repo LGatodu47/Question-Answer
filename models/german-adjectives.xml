@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model checker="Default" prompt="Traduction allemande de: %s" question_limit="Nombre de mots" question_range="Mots">
+<model checker="German" prompt="Traduction allemande de: %s" question_limit="Nombre de mots" question_range="Mots">
     <angoisse display="angoissé, anxieux">ängstlich</angoisse>
     <ouvert display="ouvert, large d'esprit">aufgeschlossen</ouvert>
     <enthousiasme display="enthousiasmé (par)">begeistert (von+D)</enthousiasme>

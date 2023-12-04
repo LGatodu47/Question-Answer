@@ -75,3 +75,26 @@ p {
     font-size: 2rem;
     align-content: center;
 }
+
+button {
+    color: var(--clr-txt);
+    background-color: var(--clr-input-bg);
+    border-color: var(--clr-input-border);
+    text-shadow: 0rem 0rem 8px var(--clr-txt);
+    border-style: solid;
+    border-width: 0.15rem;
+    border-radius: 0.25rem;
+    user-select: none;
+}
+
+button:hover {
+    outline: none;
+    border-color: var(--clr-input-border-select);
+}
+
+#reveal_btn {
+    font-size: 2rem;
+    flex-grow: 0.25;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
