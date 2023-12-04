@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model checker="German" prompt="Traduction allemande de: %s" question_range="Mots">
+<model checker="German" prompt="Traduction allemande de: %s" question_limit="Nombre de mots" question_range="Mots">
     <angoisse display="angoissé, anxieux">ängstlich</angoisse>
     <ouvert display="ouvert, large d'esprit">aufgeschlossen</ouvert>
     <enthousiasme display="enthousiasmé (par)">begeistert (von+D)</enthousiasme>
@@ -31,7 +31,7 @@
     <poli>höflich</poli>
     <espoir display="plein d'espoir">hoffnungsvoll</espoir>
     <ridicule>lächerlich</ridicule>
-    <insouciant>leichtsinnig</insouciant>
+    <insousciant>leichtsinnig</insousciant>
     <passionne display="passionné">leidenschaftlich</passionne>
     <mefiant display="méfiant">misstrauisch</mefiant>
     <envieux display="envieux (de)">neidisch (auf+A)</envieux>
@@ -40,30 +40,4 @@
     <attentionne display="plein d'égards, attentionné">rücksichtsvoll</attentionne>
     <timide>schüchtern</timide>
     <coupable>schuldig</coupable>
-    <desir display="plein de désirs">sehnsüchtig</desir>
-    <assurance display="plein d'assurance">selbstbewusst</assurance>
-    <soi display="sûr de soi">selbstsicher</soi>
-    <insouciant2 display="insouciant">sorglos</insouciant2>
-    <moqueur>spöttisch</moqueur>
-    <fier display="fier (de)">stolz (auf+A)</fier>
-    <triste>traurig</triste>
-    <surpris2 display="surpris">überrascht</surpris2>
-    <ingrat>undankbar (+D)</ingrat>
-    <desagreable display="désagréable">unfreundlich (zu+D)</desagreable>
-    <impatient>ungeduldig</impatient>
-    <malpoli display="mal élevé">unhöflich</malpoli>
-    <innocent>unschuldig</innocent>
-    <insatisfait display="insatisfait, mécontent">unzufrieden (mit+D)</insatisfait>
-    <responsable display="responsable (de)">verantwortlich (für+A)</responsable>
-    <gene display="gêné, embarassé">verlegen</gene>
-    <amoureux display="amoureux (de)">verliebt (in+A)</amoureux>
-    <raisonnable>vernünftig</raisonnable>
-    <comprehensif display="compréhensif">verständnisvoll</comprehensif>
-    <etonne display="étonné">verwundert</etonne>
-    <desespere display="désespéré">verzweifelt</desespere>
-    <prudent>vorsichtig</prudent>
-    <furieux>wütend</furieux>
-    <colere2 display="en colère">zornig</colere2>
-    <content2 display="content de">zufrieden (mit+D)</content2>
-    <confiant>zuversichtlich</confiant>
 </model>

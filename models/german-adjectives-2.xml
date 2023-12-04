@@ -18,12 +18,12 @@
     <fier display="fier (de)">stolz (auf+A)</fier>
     <triste>traurig</triste>
     <surpris>überrascht</surpris>
-    <ingrat>undankbar</ingrat>
-    <desagreable display="désagréable">unfreundlich</desagreable>
+    <ingrat>undankbar (+D)</ingrat>
+    <desagreable display="désagréable">unfreundlich (zu+D)</desagreable>
     <impatient>ungeduldig</impatient>
     <malpoli display="mal élevé">unhöflich</malpoli>
     <innocent>unschuldig</innocent>
-    <insatisfait display="insatisfait, mécontent">unzufrieden</insatisfait>
+    <insatisfait display="insatisfait, mécontent">unzufrieden (mit+D)</insatisfait>
     <responsable display="responsable (de)">verantwortlich (für+A)</responsable>
     <gene display="gêné, embarassé">verlegen</gene>
     <amoureux display="amoureux (de)">verliebt (in+A)</amoureux>
