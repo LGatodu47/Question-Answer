@@ -79,45 +79,71 @@ function load(xml) {
     if(model.hasAttribute('question_range') && questionList.length > 1) {
         let options = document.querySelector('#options')
 
-        lowerBoundInput = document.createElement('input')
-        lowerBoundInput.type = 'number'
-        lowerBoundInput.id = lowerBoundInput.name = 'qrange_lower_bound'
-        lowerBoundInput.min = 1
+        if(questionAmountInput !== null) {
+            questionAmountInput = null
+        }
+
+        let label = document.querySelector('#qrange_label')
+        if(label === null) {
+            label = document.createElement('label')
+            label.name = 'question_range'
+            label.id = 'qrange_label'
+            options.appendChild(label)
+        }
+        label.textContent = model.getAttribute('question_range') + ': '
+
+        let queriedLowerBoundInput = document.querySelector('#qrange_lower_bound')
+        if(queriedLowerBoundInput === null) {
+            lowerBoundInput = document.createElement('input')
+            lowerBoundInput.type = 'number'
+            lowerBoundInput.id = lowerBoundInput.name = 'qrange_lower_bound'
+            lowerBoundInput.min = 1
+            lowerBoundInput.onchange = onQuestionBoundsChanged
+            label.appendChild(lowerBoundInput)
+        } else if(queriedLowerBoundInput !== lowerBoundInput) {
+            lowerBoundInput = queriedLowerBoundInput
+        }
         lowerBoundInput.max = questionList.length - 1
         lowerBoundInput.value = 1
-        lowerBoundInput.onchange = onQuestionBoundsChanged
 
-        higherBoundInput = document.createElement('input')
-        higherBoundInput.type = 'number'
-        higherBoundInput.id = higherBoundInput.name = 'qrange_higher_bound'
-        higherBoundInput.min = 2
+        let queriedHigherBoundInput = document.querySelector('#qrange_higher_bound')
+        if(queriedHigherBoundInput === null) {
+            higherBoundInput = document.createElement('input')
+            higherBoundInput.type = 'number'
+            higherBoundInput.id = higherBoundInput.name = 'qrange_higher_bound'
+            higherBoundInput.min = 2
+            higherBoundInput.onchange = onQuestionBoundsChanged
+            label.appendChild(higherBoundInput)
+        } else if(queriedHigherBoundInput !== higherBoundInput) {
+            higherBoundInput = queriedHigherBoundInput
+        }
         higherBoundInput.max = higherBoundInput.value = questionList.length
-        higherBoundInput.onchange = onQuestionBoundsChanged
-
-        let label = document.createElement('label')
-        label.name = 'question_range'
-        label.textContent = model.getAttribute('question_range') + ': '
-        
-        label.appendChild(lowerBoundInput)
-        label.appendChild(higherBoundInput)
-        options.appendChild(label)
     } else if(model.hasAttribute('question_limit')) {
         let options = document.querySelector('#options')
         
-        let input = document.createElement('input')
-        input.type = 'number'
-        input.id = input.name = 'question_amount'
-        input.min = 1
-        input.max = input.value = questionList.length
-        input.onchange = onQuestionAmountChanged
-        questionAmountInput = input
+        if(lowerBoundInput !== null || higherBoundInput !== null) {
+            lowerBoundInput = higherBoundInput = null
+        }
 
-        let label = document.createElement('label')
-        label.name = input.name
+        let label = document.querySelector('#qamount_label')
+        if(label === null) {
+            label = document.createElement('label')
+            label.name = 'question_amount'
+            label.id = 'qamount_label'
+            options.appendChild(label)
+        }
         label.textContent = model.getAttribute('question_limit') + ": "
 
-        label.appendChild(input)
-        options.appendChild(label)
+        let queriedInput = document.querySelector('#question_amount')
+        if(queriedInput === null) {
+            questionAmountInput = document.createElement('input')
+            questionAmountInput.type = 'number'
+            questionAmountInput.id = input.name = 'question_amount'
+            questionAmountInput.min = 1
+            questionAmountInput.onchange = onQuestionAmountChanged
+            label.appendChild(input)
+        }
+        questionAmountInput.max = questionAmountInput.value = questionList.length
     }
 
     shuffleArray(questionQueue = sliceQuestionList())
