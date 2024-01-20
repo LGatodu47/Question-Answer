@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model checker="German" prompt="Traduction allemande de: %s" question_limit="Nombre de mots" question_range="Mots">
+    <colere display="se mettre en colère, s'agacer">sich ärgern (über+A)</colere>
+    <regretter>bedauern</regretter>
+    <senthousiasmer display="s'enthousiasmer">sich begeistern (für+A)</senthousiasmer>
+    <regretter2 display="regretter, avoir des remords">bereuen</regretter2>
+    <admirer>bewundern</admirer>
+    <humilier>demütigen</humilier>
+    <rejouir display="se réjouir à l'avance">sich freuen (auf+A)</rejouir>
+    <rejouir2 display="se réjouir">sich freuen (über+A)</rejouir2>
+    <peur display="avoir peur de">sich fürchten (vor+D)</peur>
+    <hair display="haïr">hassen</hair>
+    <esperer display="espérer">hoffen</esperer>
+    <souffrir display="souffrir de">leiden (unter+D)</souffrir>
+    <detester display="détester">nicht leiden können</detester>
+    <aimer>lieben</aimer>
+    <pitie display="avoir pitié de">mitleid haben (mit+D)</pitie>
+    <mefier display="se méfier de">misstrauen (+D)</mefier>
+    <aimer2 display="aimer (à l'indicatif)">mögen</aimer2>
+    <compte display="tenir compte de">Rücksicht nehmen (auf+A)</compte>
+    <honte display="avoir honte">sich schämen (für/wegen+G)</honte>
+    <nostalgie display="avoir le désir de, nostalgie de">sich sehnen (nach+D)</nostalgie>
+    <souci display="se faire du souci">sich Sorgen machen (um+A)</souci>
+    <mepriser display="mépriser">verachten</mepriser>
+    <confiance display="avoir confiance">vertrauen (+D)</confiance>
+    <garde display="mettre en garde (contre)">warnen (vor+D)</garde>
+    <etonner display="s'étonner de">sich wundern (über+A)</etonner>
+    <souhaiter>wünschen</souhaiter>
+    <douter>zweifeln</douter>
+</model>
