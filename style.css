@@ -98,3 +98,10 @@ button:hover {
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
 }
+
+#shortcuts {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+}

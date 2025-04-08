@@ -154,14 +154,21 @@ function load(xml) {
 
 function validateAnswer(answer) {
     if(!errorless || (currentQuestion !== undefined && checker(currentQuestion[1], answer))) {
-        currentQuestion = questionQueue.shift()
-        if(questionQueue.length <= 0) {
-            shuffleArray(questionQueue = sliceQuestionList())
-        }
-        showQuestion();
+        nextQuestion()
     }
     lastValue = answer;
     userInput.value = "";
+}
+
+function nextQuestion() {
+    if(currentQuestion === undefined) {
+        return;
+    }
+    currentQuestion = questionQueue.shift()
+    if(questionQueue.length <= 0) {
+        shuffleArray(questionQueue = sliceQuestionList())
+    }
+    showQuestion();
 }
 
 function showQuestion() {
@@ -177,6 +184,13 @@ let lastValue = ""
 userInput.addEventListener('keydown', e => {
     if(e.code === "ArrowUp" && lastValue !== "") {
         userInput.value = lastValue
+    } else if (e.code === "Tab") {
+        if (e.shiftKey) {
+            nextQuestion()
+        } else {
+            revealAnswer()
+        }
+        e.preventDefault()
     }
 })
 
@@ -201,6 +215,9 @@ function parseAnswerChecker(checker) {
                 }
                 return s.includes(a.trim())
             };
+        }
+        case 'IgnoreCase': {
+            return (a, s) => (a.toLowerCase() === s.toLowerCase())
         }
         default: {
             console.log('Answer Checker named {} could not be parsed!', checker)
