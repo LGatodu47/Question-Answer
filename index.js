@@ -8,9 +8,9 @@ const currentAnswer = document.getElementById('current_answer');
 const revealButton = document.getElementById('reveal_btn');
 // const errorlessCheckbox = document.getElementById('errorless');
 const subText = document.getElementById('sub');
-let lowerBoundInput;
-let higherBoundInput;
-let questionAmountInput;
+let lowerBoundInput = null;
+let higherBoundInput = null;
+let questionAmountInput = null;
 
 const queryModelList = async () => {
     await fetch('https://api.github.com/repos/LGatodu47/Question-Answer/contents/models?ref=master')
